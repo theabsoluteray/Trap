@@ -34,7 +34,7 @@ async def main():
 async def prune(ctx, days: int=1, rc: int=0, *, reason: str=None):
   await ctx.message.delete()
   roles = []
-  k=await ctx.guild.prune_members(days=days,roles=ctx.guild.roles, reason="reason")
+  k=await ctx.guild.prune_members(days=days,roles=ctx.guild.roles, reason=reason)
   await ctx.send(f"> Successfully Pruned {k} Members") 
 
 @client.command(aliases=['cp'])
