@@ -7,9 +7,9 @@ import asyncio
 os.system("pip install discord.py==1.7.3")
 os.system("clear||cls")
 
-client = commands.Bot(command_prefix=";", case_insensitive=True, self_bot=True, intents=discord.Intents.all())
+client = commands.Bot(command_prefix=";", case_insensitive=True, self_bot=True)
 
-token = input("[>] Enter your Token")
+token = input("[>] Enter your Token : ")
 
 @client.event
 async def on_ready():
@@ -17,10 +17,10 @@ async def on_ready():
   await main()
 
 async def main():
-  guild = int(input("[>] Enter guild ID"))
+  guild = int(input("[>] Enter guild ID : "))
   g = client.get_guild(guild)
   days = 1
-  reason = input("[>] Enter reason")
+  reason = input("[>] Enter reason : ")
   roles = []
   for role in g.roles:
     if len(role.members) == 0:
