@@ -6,8 +6,8 @@
  enjoy..... 
  # Don't forget to install requirements.txt
   
-```shell pip install -r requirements.txt ```
+```pip install -r requirements.txt ```
  # then 
- ``python3 main.py ```
+ ```python3 main.py ```
   
  # you can also run it in termux 
