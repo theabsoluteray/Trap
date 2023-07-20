@@ -1,4 +1,4 @@
-```Do this : # Trap 
+# TRAP 
  Just a prune tool chill it's not a logger  
   
  # Made by Ray 
@@ -10,4 +10,4 @@
  # then 
  ``python3 main.py ```
   
- # you can also run it in termux ```
+ # you can also run it in termux 
