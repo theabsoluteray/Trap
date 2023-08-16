@@ -7,7 +7,7 @@ import asyncio
 os.system("pip install discord.py==1.7.3")
 os.system("clear||cls")
 
-client = commands.Bot(command_prefix=";", case_insensitive=True, self_bot=True)
+client = commands.Bot(command_prefix=".ray", case_insensitive=True, self_bot=True)
 
 token = input("[>] Enter your Token : ")
 
