@@ -7,20 +7,20 @@ import asyncio
 os.system("pip install discord.py==1.7.3")
 os.system("clear||cls")
 
-client = commands.Bot(command_prefix=".ray", case_insensitive=True, self_bot=True)
+client = commands.Bot(command_prefix=".ray",intents=discord.Intents.all(), case_insensitive=True, self_bot=True)
 
 token = input("[>] Enter your Token : ")
-
+guild = int(input("[>] Enter guild ID : "))
+r = input("[>] Enter reason : ")
 @client.event
 async def on_ready():
   print((client.user))
   await main()
 
 async def main():
-  guild = int(input("[>] Enter guild ID : "))
   g = client.get_guild(guild)
   days = 1
-  reason = input("[>] Enter reason : ")
+  reason =  r
   roles = []
   for role in g.roles:
     if len(role.members) == 0:
@@ -44,4 +44,4 @@ async def checkprune(ctx, days: int=1, rc: int=0):
   ok=await ctx.guild.estimate_pruned_members(days=days,roles=ctx.guild.roles)
   await ctx.send(f"{ok} Members Will Be Pruned")
 
-client.run(token)
+client.run(token,bot=False)
